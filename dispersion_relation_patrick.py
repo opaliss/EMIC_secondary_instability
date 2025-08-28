@@ -74,8 +74,10 @@ if __name__ == "__main__":
                              #                alpha_i_=alpha_He_par_, k_perp_=k_perp, v_0_=VDHe_, omega=omega)
 
 
-    k_perp = 1 / alpha_c_perp # d_e
-    k_par = k_perp * 0.1
+    k = 0.5 / alpha_c_perp  # d_e
+    theta = np.pi/2
+    k_perp = k * np.sin(theta)
+    k_par = k * np.cos(theta)
     omega_guess = 0.2 / np.sqrt(mp_me)  # Omega_ce
 
 
